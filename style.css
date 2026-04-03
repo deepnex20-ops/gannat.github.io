@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gannat Alaa Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
 /* === General Body Styles === */
 body {
   margin: 0;
@@ -28,7 +38,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transition: top 0.4s ease;
   display: flex;
-  justify-content: center; /* Center menu on desktop */
+  justify-content: center;
   align-items: center;
   height: 65px;
 }
@@ -55,7 +65,7 @@ body {
 
 /* === Hamburger Menu Functionality === */
 .menu-toggle, .menu-icon {
-  display: none; /* Hide checkbox and hamburger icon by default */
+  display: none;
 }
 
 /* === Photo & Header === */
@@ -130,7 +140,7 @@ a:hover {
   color: #58a6ff;
 }
 
-/* === Download Buttons === */
+/* === CV Button === */
 .downloads {
   display: flex;
   gap: 20px;
@@ -174,39 +184,35 @@ a:hover {
   color: #8b949e;
 }
 
-
-/* === 📱 RESPONSIVE DESIGN (for screens <= 768px) 📱 === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .navbar {
-    justify-content: flex-end; /* Align icon to the right */
+    justify-content: flex-end;
   }
 
   .menu-icon {
-    display: block; /* Show hamburger icon */
+    display: block;
     cursor: pointer;
     font-size: 1.8rem;
     color: #c9d1d9;
     padding: 10px;
   }
-  
+
   .navbar .menu {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 65px; /* Position below the navbar */
+    top: 65px;
     left: 0;
     width: 100%;
-    
     background-color: rgba(22, 27, 34, 0.95);
     border-top: 1px solid #30363d;
-    
-    /* Hide menu by default */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out; /* Smooth transition */
+    transition: max-height 0.4s ease-out;
   }
-  
+
   .navbar .menu li {
     width: 100%;
     text-align: center;
@@ -214,18 +220,17 @@ a:hover {
 
   .navbar .menu a {
     display: block;
-    padding: 15px 0; /* Make links easier to tap */
+    padding: 15px 0;
   }
 
-  /* --- The Magic: Show menu when checkbox is checked --- */
   .menu-toggle:checked ~ .menu {
-    max-height: 400px; /* Animate to this height to show the menu */
+    max-height: 400px;
   }
-  
+
   h1 {
     font-size: 30px;
   }
-  
+
   #my-photo {
     width: 180px;
   }
@@ -234,3 +239,63 @@ a:hover {
     padding: 20px 15px;
   }
 }
+</style>
+
+</head>
+<body>
+
+<header>
+  <img src="gannat.jpeg" id="my-photo" alt="Gannat Alaa">
+  <h1>Gannat Alaa</h1>
+  <p>Machine Learning Engineer</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    Motivated Computer Science student specializing in Machine Learning and AI.
+    Passionate about solving real-world problems using data.
+  </p>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p>
+    Bachelor of Science in Computer Science<br>
+    Faculty of Science, Tanta University
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul>
+    <li>Python</li>
+    <li>Data Analysis</li>
+    <li>Machine Learning</li>
+    <li>SQL</li>
+    <li>Pandas</li>
+    <li>NumPy</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <ul>
+    <li><a href="https://github.com/deepnex20-ops/hospital-readmissions">Hospital Readmissions Prediction</a></li>
+    <li><a href="https://github.com/deepnex20-ops/ai-breakup-assistant">AI Breakup Recovery Assistant</a></li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>
+    <a href="mailto:gannatalaa72@gmail.com">Email</a> |
+    <a href="https://github.com/deepnex20-ops">GitHub</a>
+  </p>
+  <div class="downloads">
+    <a href="Gannat_Alaa_ML_CV.pdf" class="btn" target="_blank">CV</a>
+  </div>
+</section>
+
+</body>
+</html>
